@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sunrise Secondary School Nebbi | #2 in West Nile Region</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,500;0,700;0,900;1,300;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════
+   SUNRISE SECONDARY SCHOOL — NEBBI
+   Design Direction: Sunrise / Dawn — vibrant
+   amber-orange rising over West Nile greenery.
+   Deep forest green · Warm sunrise amber/orange
+   · Clean ivory whites. Bold, energetic, proud.
+═══════════════════════════════════════════════ */
+:root {
+  --sun:        #E8780A;
+  --sun-bright: #F5971E;
+  --sun-pale:   #FEF0DC;
+  --sun-glow:   #FFF3E0;
+  --forest:     #0F3D1F;
+  --forest-mid: #1A5C30;
+  --forest-lt:  #2A7A42;
+  --sky:        #0A2744;
+  --sky-mid:    #123660;
+  --ivory:      #FAFAF5;
+  --ivory-2:    #F3F1E8;
+  --white:      #FFFFFF;
+  --text:       #1C1C1C;
+  --text-mid:   #4A5060;
+  --text-lt:    #8A9090;
+  --gold:       #C8820A;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--ivory);color:var(--text);overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--forest)}
+::-webkit-scrollbar-thumb{background:var(--sun);border-radius:3px}
+
+/* ═══════════════════════════════════════════════
+   ALERT STRIP — top
+═══════════════════════════════════════════════ */
+.alert-strip{
+  background:var(--forest);
+  padding:9px 60px;
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:12px;color:rgba(255,255,255,.6);
+  letter-spacing:.3px;
+}
+.alert-strip-left{display:flex;gap:24px;align-items:center}
+.alert-strip-left span{display:flex;align-items:center;gap:7px}
+.alert-strip-right{display:flex;gap:18px;align-items:center}
+.alert-strip a{color:rgba(255,255,255,.6);transition:color .2s}
+.alert-strip a:hover{color:var(--sun-bright)}
+.strip-div{width:1px;height:12px;background:rgba(255,255,255,.15)}
+
+/* ═══════════════════════════════════════════════
+   NAVBAR
+═══════════════════════════════════════════════ */
+nav{
+  background:var(--white);
+  border-bottom:4px solid var(--sun);
+  padding:0 60px;
+  display:flex;align-items:center;justify-content:space-between;
+  box-shadow:0 2px 20px rgba(0,0,0,.08);
+  position:sticky;top:0;z-index:990;
+}
+.brand{display:flex;align-items:center;gap:14px;padding:12px 0}
+.brand-sun{
+  width:52px;height:52px;border-radius:50%;
+  background:linear-gradient(145deg,var(--sun),var(--sun-bright));
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  box-shadow:0 4px 16px rgba(232,120,10,.35);
+  flex-shrink:0;
+}
+.brand-sun-ico{font-size:22px;line-height:1}
+.brand-sun-txt{font-size:8px;font-weight:700;color:var(--forest);letter-spacing:1px;text-transform:uppercase}
+.brand-text{}
+.brand-name{
+  font-family:'Fraunces',serif;
+  font-size:18px;font-weight:700;color:var(--forest);
+  line-height:1.1;
+}
+.brand-name span{color:var(--sun)}
+.brand-sub{font-size:10px;font-weight:500;color:var(--text-lt);letter-spacing:2px;text-transform:uppercase;margin-top:2px}
+.nav-links{display:flex;align-items:stretch;list-style:none;gap:0;height:100%}
+.nav-links li a{
+  display:flex;align-items:center;
+  padding:0 18px;height:74px;
+  font-size:13px;font-weight:500;
+  color:var(--text-mid);
+  border-bottom:4px solid transparent;
+  margin-bottom:-4px;
+  transition:all .2s;letter-spacing:.2px;
+}
+.nav-links li a:hover,.nav-links li a.active{
+  color:var(--forest);border-bottom-color:var(--sun);
+}
+.nav-enroll{
+  background:var(--sun)!important;
+  color:var(--white)!important;
+  padding:10px 22px!important;
+  border-radius:6px;height:auto!important;
+  border-bottom:none!important;
+  font-weight:600!important;margin-left:12px;
+  font-size:13px!important;
+  transition:background .2s!important;
+}
+.nav-enroll:hover{background:var(--forest)!important;color:var(--white)!important}
+
+/* ═══════════════════════════════════════════════
+   HERO
+═══════════════════════════════════════════════ */
+.hero{
+  position:relative;
+  min-height:calc(100vh - 110px);
+  overflow:hidden;
+  display:flex;align-items:center;
+}
+/* sunrise gradient sky as fallback */
+.hero::before{
+  content:'';
+  position:absolute;inset:0;
+  background:linear-gradient(160deg,#0F2A12 0%,#1A4A28 40%,#2D6B3E 100%);
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background-image:url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/3c/65/2c/caption.jpg?w=1200&h=-1&s=1');
+  background-size:cover;background-position:center 40%;
+  opacity:.45;
+  animation:hzoom 22s ease-in-out infinite alternate;
+}
+@keyframes hzoom{from{transform:scale(1.04)}to{transform:scale(1.12)}}
+.hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(
+    110deg,
+    rgba(15,61,31,.93) 0%,
+    rgba(15,61,31,.7) 40%,
+    rgba(232,120,10,.12) 100%
+  );
+}
+/* sunrise glow top-right */
+.hero-glow{
+  position:absolute;top:-100px;right:-100px;
+  width:600px;height:600px;
+  background:radial-gradient(circle,rgba(232,120,10,.25) 0%,transparent 70%);
+  pointer-events:none;
+}
+.hero-inner{
+  position:relative;z-index:2;
+  padding:0 80px;
+  max-width:820px;
+  animation:fadeUp 1s ease-out both;
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+
+.hero-badge{
+  display:inline-flex;align-items:center;gap:10px;
+  background:rgba(232,120,10,.2);
+  border:1px solid rgba(232,120,10,.5);
+  border-radius:40px;padding:8px 20px;
+  margin-bottom:28px;
+}
+.hero-badge-dot{
+  width:8px;height:8px;border-radius:50%;
+  background:var(--sun-bright);
+  animation:blink 2s infinite;
+}
+@keyframes blink{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.5)}}
+.hero-badge-text{
+  font-size:11px;font-weight:700;
+  color:var(--sun-bright);
+  letter-spacing:2.5px;text-transform:uppercase;
+}
+
+.hero h1{
+  font-family:'Fraunces',serif;
+  font-size:clamp(46px,7vw,86px);
+  font-weight:900;color:var(--white);
+  line-height:1.03;margin-bottom:22px;
+}
+.hero h1 span{
+  font-style:italic;color:var(--sun-bright);
+  display:block;
+}
+.hero-desc{
+  font-size:17px;font-weight:300;
+  color:rgba(255,255,255,.75);
+  line-height:1.8;max-width:520px;margin-bottom:42px;
+}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn-sun{
+  background:linear-gradient(135deg,var(--sun),var(--sun-bright));
+  color:var(--white);padding:16px 38px;
+  border-radius:8px;font-weight:700;font-size:15px;
+  letter-spacing:.3px;
+  box-shadow:0 8px 28px rgba(232,120,10,.45);
+  transition:all .25s;display:inline-flex;align-items:center;gap:9px;
+}
+.btn-sun:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(232,120,10,.6)}
+.btn-outline-w{
+  border:1.5px solid rgba(255,255,255,.35);
+  color:var(--white);padding:16px 38px;
+  border-radius:8px;font-size:15px;font-weight:400;
+  transition:all .25s;display:inline-flex;align-items:center;gap:9px;
+}
+.btn-outline-w:hover{border-color:var(--sun-bright);color:var(--sun-bright)}
+
+/* achievement ribbon */
+.hero-ribbon{
+  position:absolute;bottom:0;left:0;right:0;z-index:3;
+  background:rgba(15,61,31,.9);
+  backdrop-filter:blur(10px);
+  border-top:1px solid rgba(232,120,10,.25);
+  display:grid;grid-template-columns:repeat(4,1fr);
+}
+.ribbon-item{
+  padding:20px 28px;
+  border-right:1px solid rgba(255,255,255,.07);
+  display:flex;align-items:center;gap:14px;
+}
+.ribbon-item:last-child{border-right:none}
+.ribbon-ico{font-size:26px;opacity:.9;flex-shrink:0}
+.ribbon-num{
+  font-family:'Fraunces',serif;
+  font-size:26px;font-weight:700;
+  color:var(--sun-bright);line-height:1;
+}
+.ribbon-label{font-size:10px;font-weight:500;color:rgba(255,255,255,.45);letter-spacing:1.2px;text-transform:uppercase;margin-top:3px}
+
+/* ═══════════════════════════════════════════════
+   NEWS TICKER
+═══════════════════════════════════════════════ */
+.ticker{
+  display:flex;align-items:stretch;
+  background:var(--sun);overflow:hidden;
+}
+.ticker-label{
+  background:var(--forest);
+  color:var(--sun-bright);padding:0 24px;
+  font-size:11px;font-weight:700;letter-spacing:2px;
+  text-transform:uppercase;white-space:nowrap;
+  display:flex;align-items:center;gap:8px;flex-shrink:0;
+}
+.ticker-wrap{overflow:hidden;flex:1;padding:11px 0}
+.ticker-track{display:flex;animation:scroll 35s linear infinite;white-space:nowrap}
+.ticker-track:hover{animation-play-state:paused}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.t-item{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:0 36px;
+  font-size:13px;font-weight:600;color:var(--forest);
+  flex-shrink:0;
+}
+.t-sep{width:4px;height:4px;border-radius:50%;background:rgba(15,61,31,.35)}
+
+/* ═══════════════════════════════════════════════
+   ACHIEVEMENT BANNER — full-width bold stat
+═══════════════════════════════════════════════ */
+.achievement{
+  background:var(--forest);
+  padding:56px 60px;
+  text-align:center;
+  position:relative;overflow:hidden;
+}
+.achievement::before,.achievement::after{
+  content:'☀';
+  font-size:220px;line-height:1;
+  color:rgba(232,120,10,.06);
+  position:absolute;top:-40px;
+  pointer-events:none;
+}
+.achievement::before{left:-20px}
+.achievement::after{right:-20px}
+.achievement-inner{position:relative;z-index:1}
+.achievement h2{
+  font-family:'Fraunces',serif;
+  font-size:clamp(20px,3vw,30px);
+  font-weight:300;font-style:italic;
+  color:rgba(255,255,255,.65);margin-bottom:10px;
+}
+.achievement-stat{
+  font-family:'Fraunces',serif;
+  font-size:clamp(44px,8vw,92px);
+  font-weight:900;
+  color:var(--sun-bright);line-height:1;
+  margin-bottom:12px;
+}
+.achievement p{
+  font-size:16px;font-weight:300;
+  color:rgba(255,255,255,.6);
+  max-width:600px;margin:0 auto;line-height:1.7;
+}
+.achievement-quote{
+  margin-top:28px;
+  background:rgba(255,255,255,.05);
+  border-left:4px solid var(--sun);
+  padding:16px 24px;
+  max-width:680px;margin:28px auto 0;
+  font-size:15px;font-style:italic;font-weight:300;
+  color:rgba(255,255,255,.75);line-height:1.75;
+  border-radius:0 8px 8px 0;text-align:left;
+}
+.achievement-quote cite{
+  display:block;margin-top:8px;font-size:12px;
+  font-style:normal;font-weight:600;
+  color:var(--sun);letter-spacing:1px;text-transform:uppercase;
+}
+
+/* ═══════════════════════════════════════════════
+   ABOUT
+═══════════════════════════════════════════════ */
+.about{display:grid;grid-template-columns:1fr 1fr;min-height:560px}
+.about-img{position:relative;overflow:hidden}
+.about-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.about-img:hover img{transform:scale(1.04)}
+.about-img-ol{position:absolute;inset:0;background:linear-gradient(to right,transparent,rgba(15,61,31,.15))}
+.about-tag{
+  position:absolute;bottom:28px;right:-1px;
+  background:var(--sun);color:var(--white);
+  padding:18px 26px;min-width:180px;
+}
+.about-tag-num{font-family:'Fraunces',serif;font-size:40px;font-weight:900;line-height:1}
+.about-tag-lbl{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-top:4px;opacity:.85}
+
+.about-content{
+  background:var(--ivory-2);
+  padding:72px 64px;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.s-tag{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.s-tag-line{width:30px;height:2px;background:var(--sun)}
+.s-tag-text{font-size:10px;font-weight:700;color:var(--sun);letter-spacing:3px;text-transform:uppercase}
+
+.about-content h2{
+  font-family:'Fraunces',serif;
+  font-size:clamp(32px,3.5vw,46px);
+  font-weight:700;color:var(--forest);
+  line-height:1.2;margin-bottom:18px;
+}
+.about-content h2 em{font-style:italic;color:var(--sun)}
+.about-content p{font-size:15px;font-weight:300;color:var(--text-mid);line-height:1.85;margin-bottom:14px}
+.about-facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
+.fact{
+  background:var(--white);border-radius:10px;
+  padding:16px 18px;border:1px solid #E8E4D8;
+  display:flex;align-items:flex-start;gap:12px;
+  transition:border-color .2s;
+}
+.fact:hover{border-color:var(--sun)}
+.fact-ico{font-size:20px;flex-shrink:0;margin-top:2px}
+.fact-title{font-size:13px;font-weight:700;color:var(--forest);margin-bottom:3px}
+.fact-desc{font-size:12px;font-weight:300;color:var(--text-lt);line-height:1.5}
+
+/* ═══════════════════════════════════════════════
+   ACADEMICS / PROGRAMS
+═══════════════════════════════════════════════ */
+.academics{padding:100px 60px;background:var(--white)}
+.sec-head{text-align:center;margin-bottom:60px}
+.sec-head .s-tag{justify-content:center;margin-bottom:14px}
+.sec-head h2{font-family:'Fraunces',serif;font-size:clamp(34px,4.5vw,52px);font-weight:700;color:var(--forest);line-height:1.15;margin-bottom:14px}
+.sec-head h2 em{font-style:italic;color:var(--sun)}
+.sec-head p{font-size:16px;font-weight:300;color:var(--text-mid);max-width:520px;margin:0 auto;line-height:1.7}
+
+.acad-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1180px;margin:0 auto}
+.acad-card{
+  border-radius:14px;overflow:hidden;
+  background:var(--ivory);border:1px solid #E8E4D8;
+  transition:all .35s;display:flex;flex-direction:column;
+}
+.acad-card:hover{transform:translateY(-8px);box-shadow:0 20px 48px rgba(15,61,31,.1);border-color:rgba(232,120,10,.4)}
+.acad-img-wrap{position:relative;overflow:hidden;height:200px}
+.acad-img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.acad-card:hover .acad-img{transform:scale(1.06)}
+.acad-pill{
+  position:absolute;top:14px;left:14px;
+  background:var(--sun);color:var(--white);
+  font-size:10px;font-weight:700;letter-spacing:2px;
+  text-transform:uppercase;padding:5px 12px;border-radius:4px;
+}
+.acad-body{padding:26px;flex:1;display:flex;flex-direction:column}
+.acad-body h3{font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--forest);margin-bottom:10px}
+.acad-body p{font-size:14px;font-weight:300;color:var(--text-mid);line-height:1.7;flex:1;margin-bottom:18px}
+.acad-tags{display:flex;flex-wrap:wrap;gap:6px}
+.acad-tag{background:var(--sun-pale);color:var(--gold);font-size:11px;font-weight:600;padding:4px 11px;border-radius:20px}
+
+/* ═══════════════════════════════════════════════
+   CBC HIGHLIGHT
+═══════════════════════════════════════════════ */
+.cbc{
+  background:linear-gradient(135deg,var(--forest) 0%,var(--forest-mid) 100%);
+  padding:80px 60px;
+}
+.cbc-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;max-width:1180px;margin:0 auto;align-items:center}
+.cbc-left h2{font-family:'Fraunces',serif;font-size:clamp(32px,3.5vw,46px);font-weight:700;color:var(--white);line-height:1.2;margin-bottom:16px}
+.cbc-left h2 em{font-style:italic;color:var(--sun-bright)}
+.cbc-left p{font-size:15px;font-weight:300;color:rgba(255,255,255,.65);line-height:1.85;margin-bottom:18px}
+.cbc-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+.cbc-stat{background:rgba(255,255,255,.07);border:1px solid rgba(232,120,10,.2);border-radius:10px;padding:20px;text-align:center}
+.cbc-stat-num{font-family:'Fraunces',serif;font-size:38px;font-weight:900;color:var(--sun-bright);line-height:1}
+.cbc-stat-lbl{font-size:11px;font-weight:500;color:rgba(255,255,255,.45);letter-spacing:1.2px;text-transform:uppercase;margin-top:5px}
+.cbc-pillars{display:flex;flex-direction:column;gap:16px}
+.cbc-pillar{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:10px;padding:20px 22px;
+  display:flex;align-items:flex-start;gap:16px;
+  transition:border-color .2s;
+}
+.cbc-pillar:hover{border-color:rgba(232,120,10,.4)}
+.cbc-pillar-ico{font-size:24px;flex-shrink:0}
+.cbc-pillar h4{font-size:15px;font-weight:600;color:var(--white);margin-bottom:5px}
+.cbc-pillar p{font-size:13px;font-weight:300;color:rgba(255,255,255,.5);line-height:1.6}
+
+/* ═══════════════════════════════════════════════
+   GALLERY
+═══════════════════════════════════════════════ */
+.gallery{padding:100px 60px;background:var(--ivory-2)}
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  grid-template-rows:250px 250px;
+  gap:12px;max-width:1180px;margin:0 auto;
+}
+.gi{border-radius:10px;overflow:hidden;position:relative;cursor:pointer}
+.gi img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.gi:hover img{transform:scale(1.07)}
+.gi-ol{position:absolute;inset:0;background:linear-gradient(to top,rgba(15,61,31,.7),transparent 50%);opacity:0;transition:opacity .3s;display:flex;align-items:flex-end;padding:14px}
+.gi:hover .gi-ol{opacity:1}
+.gi-ol span{font-size:12px;font-weight:600;color:var(--white);letter-spacing:.5px}
+.ga{grid-column:1/5;grid-row:1/3}
+.gb{grid-column:5/9;grid-row:1/2}
+.gc{grid-column:9/13;grid-row:1/2}
+.gd{grid-column:5/9;grid-row:2/3}
+.ge{grid-column:9/13;grid-row:2/3}
+
+/* ═══════════════════════════════════════════════
+   WHY SUNRISE
+═══════════════════════════════════════════════ */
+.why{padding:100px 60px;background:var(--white)}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1180px;margin:60px auto 0}
+.why-card{
+  padding:32px 24px;
+  border-radius:12px;
+  background:var(--ivory);
+  border:1px solid #E8E4D8;
+  text-align:center;
+  transition:all .3s;
+  position:relative;overflow:hidden;
+}
+.why-card::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--sun),var(--sun-bright));
+  transform:scaleX(0);transform-origin:left;transition:transform .4s;
+}
+.why-card:hover{transform:translateY(-6px);border-color:rgba(232,120,10,.3);box-shadow:0 16px 40px rgba(232,120,10,.1)}
+.why-card:hover::after{transform:scaleX(1)}
+.why-ico{font-size:40px;margin-bottom:16px;display:block}
+.why-card h3{font-family:'Fraunces',serif;font-size:20px;font-weight:700;color:var(--forest);margin-bottom:10px}
+.why-card p{font-size:13.5px;font-weight:300;color:var(--text-mid);line-height:1.7}
+
+/* ═══════════════════════════════════════════════
+   TESTIMONIALS
+═══════════════════════════════════════════════ */
+.testi{padding:100px 60px;background:var(--ivory-2)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1180px;margin:0 auto}
+.tc{
+  background:var(--white);border-radius:12px;
+  padding:34px;border:1px solid #E8E4D8;
+  position:relative;transition:all .3s;
+}
+.tc:hover{border-color:var(--sun);box-shadow:0 12px 36px rgba(232,120,10,.1);transform:translateY(-4px)}
+.tc::before{
+  content:'"';font-family:'Fraunces',serif;
+  font-size:90px;font-weight:900;
+  color:var(--sun-pale);position:absolute;
+  top:10px;left:20px;line-height:1;pointer-events:none;
+}
+.tc-stars{color:var(--sun);font-size:15px;margin-bottom:12px}
+.tc-text{font-size:15px;font-weight:300;color:var(--text-mid);line-height:1.8;font-style:italic;margin-bottom:22px}
+.tc-author{display:flex;align-items:center;gap:12px}
+.tc-avatar{
+  width:44px;height:44px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(135deg,var(--sun),var(--forest));
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Fraunces',serif;font-size:16px;font-weight:700;color:var(--white);
+}
+.tc-name{font-size:14px;font-weight:700;color:var(--forest)}
+.tc-role{font-size:12px;font-weight:300;color:var(--text-lt)}
+
+/* ═══════════════════════════════════════════════
+   SOCIAL MEDIA
+═══════════════════════════════════════════════ */
+.social{
+  padding:100px 60px;
+  background:linear-gradient(145deg,var(--forest) 0%,var(--sky) 100%);
+}
+.social .sec-head h2{color:var(--white)}
+.social .sec-head p{color:rgba(255,255,255,.5)}
+.social-btns{display:flex;justify-content:center;gap:14px;margin:32px auto 48px;flex-wrap:wrap}
+.soc-btn{display:inline-flex;align-items:center;gap:10px;padding:12px 26px;border-radius:8px;font-size:14px;font-weight:600;border:1.5px solid;transition:all .25s}
+.soc-fb{border-color:rgba(80,130,200,.5);color:#7BB0F5;background:rgba(80,130,200,.08)}
+.soc-fb:hover{background:rgba(80,130,200,.2);border-color:#7BB0F5}
+.soc-wa{border-color:rgba(37,211,102,.4);color:#5FD878;background:rgba(37,211,102,.07)}
+.soc-wa:hover{background:rgba(37,211,102,.18);border-color:#5FD878}
+.soc-ig{border-color:rgba(240,90,90,.4);color:#F07070;background:rgba(240,90,90,.07)}
+.soc-ig:hover{background:rgba(240,90,90,.18);border-color:#F07070}
+
+.social-feed{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:1180px;margin:0 auto}
+.sc{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:12px;overflow:hidden;transition:all .3s;cursor:pointer;
+}
+.sc:hover{background:rgba(255,255,255,.1);border-color:rgba(232,120,10,.4);transform:translateY(-4px)}
+.sc-img{width:100%;height:165px;object-fit:cover}
+.sc-body{padding:15px}
+.sc-plat{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--sun-bright);margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.sc-text{font-size:13px;font-weight:300;color:rgba(255,255,255,.65);line-height:1.6;margin-bottom:10px}
+.sc-meta{display:flex;gap:14px;font-size:11px;color:rgba(255,255,255,.3)}
+
+/* ═══════════════════════════════════════════════
+   CONTACT
+═══════════════════════════════════════════════ */
+.contact{padding:100px 60px;background:var(--ivory)}
+.contact-inner{display:grid;grid-template-columns:5fr 7fr;gap:60px;max-width:1180px;margin:0 auto;align-items:start}
+.ci h2{font-family:'Fraunces',serif;font-size:clamp(30px,3.5vw,44px);font-weight:700;color:var(--forest);line-height:1.2;margin-bottom:14px}
+.ci h2 em{font-style:italic;color:var(--sun)}
+.ci > p{font-size:15px;font-weight:300;color:var(--text-mid);line-height:1.7;margin-bottom:36px}
+.c-items{display:flex;flex-direction:column;gap:18px}
+.c-item{display:flex;align-items:flex-start;gap:14px}
+.c-ico{width:46px;height:46px;border-radius:10px;background:var(--forest);display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0;box-shadow:0 6px 16px rgba(15,61,31,.2)}
+.c-body strong{display:block;font-size:11px;font-weight:700;color:var(--forest);letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px}
+.c-body span,.c-body a{font-size:14px;font-weight:300;color:var(--text-mid);line-height:1.55}
+.c-body a{color:var(--sun);transition:color .2s}
+.c-body a:hover{color:var(--forest)}
+
+.cf{background:var(--white);border-radius:16px;padding:44px;border:1px solid #E8E4D8;box-shadow:0 8px 32px rgba(0,0,0,.06)}
+.cf-title{font-family:'Fraunces',serif;font-size:26px;font-weight:700;color:var(--forest);margin-bottom:6px}
+.cf-sub{font-size:13px;font-weight:300;color:var(--text-lt);margin-bottom:26px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.fg{margin-bottom:14px}
+.fg label{display:block;font-size:11px;font-weight:700;color:var(--text-mid);letter-spacing:1px;text-transform:uppercase;margin-bottom:7px}
+.fc{
+  width:100%;background:var(--ivory);border:1.5px solid #DEDAD0;
+  border-radius:8px;padding:13px 15px;
+  font-size:14px;font-weight:300;color:var(--text);
+  font-family:'Plus Jakarta Sans',sans-serif;
+  transition:border-color .2s;outline:none;appearance:none;
+}
+.fc:focus{border-color:var(--sun);background:var(--white);box-shadow:0 0 0 3px rgba(232,120,10,.1)}
+textarea.fc{height:105px;resize:vertical}
+.btn-send{
+  width:100%;background:var(--forest);color:var(--white);
+  border:none;border-radius:8px;padding:16px;
+  font-size:15px;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;
+  cursor:pointer;transition:all .25s;letter-spacing:.3px;
+}
+.btn-send:hover{background:var(--sun)}
+.f-note{text-align:center;margin-top:12px;font-size:12px;font-weight:300;color:var(--text-lt)}
+
+/* ═══════════════════════════════════════════════
+   MAP
+═══════════════════════════════════════════════ */
+.map{position:relative;height:400px}
+.map iframe{width:100%;height:100%;border:none;display:block}
+.map-badge{position:absolute;top:20px;left:20px;background:var(--forest);border-left:4px solid var(--sun);padding:16px 22px;border-radius:0 8px 8px 0;box-shadow:0 8px 28px rgba(0,0,0,.3)}
+.map-badge strong{display:block;color:var(--white);font-size:14px;font-weight:700;margin-bottom:4px}
+.map-badge span{font-size:12px;font-weight:300;color:var(--sun-bright)}
+
+/* ═══════════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════════ */
+footer{
+  background:var(--forest);
+  padding:64px 60px 28px;
+  border-top:3px solid var(--sun);
+}
+.footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.fb-brand{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.fb-ico{width:46px;height:46px;border-radius:50%;background:var(--sun);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.fb-name{font-family:'Fraunces',serif;font-size:16px;font-weight:700;color:var(--white);line-height:1.1}
+.fb-name small{display:block;font-family:'Plus Jakarta Sans',sans-serif;font-size:9px;font-weight:500;color:var(--sun-bright);letter-spacing:2px;text-transform:uppercase;margin-top:2px}
+.fb-about{font-size:13px;font-weight:300;color:rgba(255,255,255,.4);line-height:1.8;max-width:270px}
+.fc-col h4{font-size:11px;font-weight:700;color:var(--sun);letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid rgba(232,120,10,.2)}
+.fc-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.fc-col ul li a{font-size:13px;font-weight:300;color:rgba(255,255,255,.45);transition:color .2s;display:flex;align-items:center;gap:6px}
+.fc-col ul li a:hover{color:var(--sun-bright)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
+.footer-bottom p{font-size:12px;font-weight:300;color:rgba(255,255,255,.3)}
+.f-socials{display:flex;gap:10px}
+.fs-btn{width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;font-size:13px;color:rgba(255,255,255,.4);transition:all .2s;text-decoration:none}
+.fs-btn:hover{border-color:var(--sun);color:var(--sun);background:rgba(232,120,10,.1)}
+
+/* ═══════════════════════════════════════════════
+   REVEAL ANIMATION
+═══════════════════════════════════════════════ */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
+.reveal.in{opacity:1;transform:translateY(0)}
+.rd1{transition-delay:.1s}.rd2{transition-delay:.2s}.rd3{transition-delay:.3s}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════ */
+@media(max-width:1060px){
+  .alert-strip,.contact,footer{padding-left:28px;padding-right:28px}
+  nav{padding:0 28px}
+  .academics,.cbc,.gallery,.why,.testi,.social{padding:60px 28px}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:30px}
+  .acad-grid{grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .social-feed{grid-template-columns:1fr 1fr}
+  .about{grid-template-columns:1fr}
+  .about-img{height:360px}
+  .cbc-grid{grid-template-columns:1fr;gap:40px}
+  .contact-inner{grid-template-columns:1fr;gap:40px}
+  .hero-inner{padding:0 32px}
+}
+@media(max-width:720px){
+  .alert-strip{display:none}
+  .nav-links{display:none}
+  nav{padding:0 20px}
+  .hero h1{font-size:40px}
+  .hero-ribbon{grid-template-columns:1fr 1fr}
+  .hero-ribbon .ribbon-item:nth-child(3),.hero-ribbon .ribbon-item:nth-child(4){border-top:1px solid rgba(255,255,255,.07)}
+  .acad-grid{grid-template-columns:1fr}
+  .testi-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+  .social-feed{grid-template-columns:1fr}
+  .gallery-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .ga{grid-column:1/3;grid-row:1}
+  .gb,.gc,.gd,.ge{grid-column:auto;grid-row:auto}
+  .footer-grid{grid-template-columns:1fr}
+  .f-row{grid-template-columns:1fr}
+  .cf{padding:24px 18px}
+  .cbc-stats{grid-template-columns:1fr}
+  .achievement{padding:40px 24px}
+  .cbc{padding:48px 24px}
+}
+</style>
+</head>
+<body>
+
+<!-- ▓▓ ALERT STRIP ▓▓ -->
+<div class="alert-strip">
+  <div class="alert-strip-left">
+    <span>📍 Nyangama Upper Village, Nebbi Town, Nebbi District, Northern Uganda</span>
+    <div class="strip-div"></div>
+    <span>📞 +256 772 666 006</span>
+    <div class="strip-div"></div>
+    <span>🕐 Mon–Fri 7:30am–5:00pm</span>
+  </div>
+  <div class="alert-strip-right">
+    <a href="https://www.facebook.com/sunrisessnebbi/" target="_blank">Facebook</a>
+    <div class="strip-div"></div>
+    <a href="https://www.instagram.com/sunrise_edu/" target="_blank">Instagram</a>
+    <div class="strip-div"></div>
+    <a href="mailto:info@sunrisessnebbi.ac.ug">✉ Email Us</a>
+  </div>
+</div>
+
+<!-- ▓▓ NAVBAR ▓▓ -->
+<nav id="nav">
+  <div class="brand">
+    <div class="brand-sun">
+      <div class="brand-sun-ico">☀️</div>
+      <div class="brand-sun-txt">SSN</div>
+    </div>
+    <div class="brand-text">
+      <div class="brand-name"><span>Sunrise</span> Secondary School</div>
+      <div class="brand-sub">Nebbi · West Nile · Uganda</div>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#academics">Academics</a></li>
+    <li><a href="#cbc">CBC</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#testimonials">Community</a></li>
+    <li><a href="#social">Updates</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact" class="nav-enroll">Enroll Now →</a></li>
+  </ul>
+</nav>
+
+<!-- ▓▓ HERO ▓▓ -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-glow"></div>
+
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <div class="hero-badge-dot"></div>
+      <div class="hero-badge-text">🏆 #2 in West Nile Region — 2025 UCE CBC Results</div>
+    </div>
+    <h1>
+      Where Potential Meets
+      <span>Purpose</span>
+    </h1>
+    <p class="hero-desc">
+      Sunrise Secondary School — a privately owned school in Nebbi Town, Nyangama Upper Village — is rising as West Nile's beacon of academic excellence, character, and community pride.
+    </p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-sun">Apply for Admission <span>→</span></a>
+      <a href="#about" class="btn-outline-w">Explore Our School <span>↓</span></a>
+    </div>
+  </div>
+
+  <div class="hero-ribbon">
+    <div class="ribbon-item">
+      <div class="ribbon-ico">🥈</div>
+      <div>
+        <div class="ribbon-num">#2 West Nile</div>
+        <div class="ribbon-label">2025 UCE Results</div>
+      </div>
+    </div>
+    <div class="ribbon-item">
+      <div class="ribbon-ico">🎓</div>
+      <div>
+        <div class="ribbon-num">46 Grade A's</div>
+        <div class="ribbon-label">UCE Distinctions</div>
+      </div>
+    </div>
+    <div class="ribbon-item">
+      <div class="ribbon-ico">📚</div>
+      <div>
+        <div class="ribbon-num">110 Grade B's</div>
+        <div class="ribbon-label">UCE CBC 2025</div>
+      </div>
+    </div>
+    <div class="ribbon-item">
+      <div class="ribbon-ico">🏙️</div>
+      <div>
+        <div class="ribbon-num">Nebbi Town</div>
+        <div class="ribbon-label">Nyangama Upper Village</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ▓▓ TICKER ▓▓ -->
+<div class="ticker">
+  <div class="ticker-label">🔔 SCHOOL NEWS</div>
+  <div class="ticker-wrap">
+    <div class="ticker-track">
+      <div class="t-item"><span>🏆</span> Sunrise SS ranked #2 in West Nile 2025 UCE CBC exams — We are PROUD!</div>
+      <div class="t-item"><div class="t-sep"></div></div>
+      <div class="t-item"><span>🎓</span> 46 students scored Grade A in the 2025 UCE — Congratulations to our champions!</div>
+      <div class="t-item"><div class="t-sep"></div></div>
+      <div class="t-item"><span>📅</span> Admissions Open for S.1 and S.5 — 2025/2026 Academic Year</div>
+      <div class="t-item"><div class="t-sep"></div></div>
+      <div class="t-item"><span>📍</span> Visit us at Nyangama Upper Village, Nebbi Town · Tel: 0772 666 006</div>
+      <div class="t-item"><div class="t-sep"></div></div>
+      <div class="t-item"><span>☀️</span> "Sunrise, thank you for taking away our shame!" — Archbishop Dr. Henry Luke Orombi</div>
+      <div class="t-item"><div class="t-sep"></div></div>
+      <!-- repeat for seamless loop -->
+      <div class="t-item"><span>🏆</span> Sunrise SS ranked #2 in West Nile 2025 UCE CBC exams — We are PROUD!</div>
+      <div class="t-item"><div class="t-sep"></div></div>
+      <div class="t-item"><span>🎓</span> 46 students scored Grade A in the 2025 UCE — Congratulations to our champions!</div>
+      <div class="t-item"><div class="t-sep"></div></div>
+      <div class="t-item"><span>📅</span> Admissions Open for S.1 and S.5 — 2025/2026 Academic Year</div>
+      <div class="t-item"><div class="t-sep"></div></div>
+      <div class="t-item"><span>📍</span> Visit us at Nyangama Upper Village, Nebbi Town · Tel: 0772 666 006</div>
+      <div class="t-item"><div class="t-sep"></div></div>
+      <div class="t-item"><span>☀️</span> "Sunrise, thank you for taking away our shame!" — Archbishop Dr. Henry Luke Orombi</div>
+    </div>
+  </div>
+</div>
+
+<!-- ▓▓ ACHIEVEMENT BANNER ▓▓ -->
+<div class="achievement">
+  <div class="achievement-inner">
+    <h2>2025 Uganda Certificate of Education Results</h2>
+    <div class="achievement-stat">#2 in West Nile</div>
+    <p>Sunrise Secondary School emerged as the second-best school in the entire West Nile region in the 2025 UCE examinations under Uganda's Competency-Based Curriculum — behind only St. Andrews College Moyo, ahead of every school in Nebbi, Zombo and Pakwach.</p>
+    <div class="achievement-quote">
+      "Sunrise, thank you for taking away our 'shame'… people laughed at Nebbi, asking, can anything good come from here? Last time you were second to St. Daniel Comboni, but right now you have sprinted."
+      <cite>— Retired Archbishop Emeritus Dr. Henry Luke Orombi, Thanksgiving Prayer 2025</cite>
+    </div>
+  </div>
+</div>
+
+<!-- ▓▓ ABOUT ▓▓ -->
+<section class="about" id="about">
+  <div class="about-img">
+    <img
+      src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/3c/65/2c/caption.jpg?w=1200&h=-1&s=1"
+      onerror="this.src='https://images.globalgiving.org/pfil/45591/pict_large.jpg'"
+      alt="Nebbi Uganda — home of Sunrise Secondary School"
+    >
+    <div class="about-img-ol"></div>
+    <div class="about-tag">
+      <div class="about-tag-num">S1–S6</div>
+      <div class="about-tag-lbl">Full Secondary</div>
+    </div>
+  </div>
+  <div class="about-content">
+    <div class="s-tag">
+      <div class="s-tag-line"></div>
+      <div class="s-tag-text">About Our School</div>
+    </div>
+    <h2>Nebbi's Fastest <em>Rising Star</em> in Education</h2>
+    <p>
+      Sunrise Secondary School is a privately owned co-educational secondary school situated in Nyangama Upper Village, Nebbi Town — at the heart of Uganda's West Nile sub-region. We offer a full secondary education from Senior One through Senior Six, with both day and boarding options.
+    </p>
+    <p>
+      Under the leadership of Headteacher Denis Ocaki and a devoted teaching staff, Sunrise has rapidly become one of the most respected academic institutions in northern Uganda. Our 2025 CBC results — placing us second in all of West Nile — are proof that excellence in Nebbi is not just possible; it is inevitable.
+    </p>
+    <div class="about-facts">
+      <div class="fact">
+        <div class="fact-ico">🏫</div>
+        <div>
+          <div class="fact-title">Private Sponsored School</div>
+          <div class="fact-desc">Owned & operated with a commitment to accessible excellence in Nebbi</div>
+        </div>
+      </div>
+      <div class="fact">
+        <div class="fact-ico">🧑‍🤝‍🧑</div>
+        <div>
+          <div class="fact-title">Mixed Day & Boarding</div>
+          <div class="fact-desc">Flexible options for families across greater Nebbi district</div>
+        </div>
+      </div>
+      <div class="fact">
+        <div class="fact-ico">🌅</div>
+        <div>
+          <div class="fact-title">West Nile's Rising School</div>
+          <div class="fact-desc">Consistently improving UCE & UACE performance year on year</div>
+        </div>
+      </div>
+      <div class="fact">
+        <div class="fact-ico">👨‍🏫</div>
+        <div>
+          <div class="fact-title">Headteacher: Denis Ocaki</div>
+          <div class="fact-desc">Visionary leadership driving CBC excellence across Nebbi</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ▓▓ ACADEMICS ▓▓ -->
+<section class="academics reveal" id="academics">
+  <div class="sec-head">
+    <div class="s-tag"><div class="s-tag-line"></div><div class="s-tag-text">Academic Programs</div><div class="s-tag-line"></div></div>
+    <h2>Full Secondary Education<br>from S.1 to <em>S.6</em></h2>
+    <p>A complete, quality secondary pathway aligned with Uganda's national curriculum — empowering every student to reach their highest potential.</p>
+  </div>
+  <div class="acad-grid">
+    <div class="acad-card reveal rd1">
+      <div class="acad-img-wrap">
+        <img class="acad-img"
+          src="https://memoiruganda.com/wp-content/uploads/2021/11/Secondary-School-Students.jpg"
+          onerror="this.src='https://images.globalgiving.org/pfil/45591/pict_large.jpg'"
+          alt="O Level Students"
+        >
+        <div class="acad-pill">O – Level</div>
+      </div>
+      <div class="acad-body">
+        <h3>Ordinary Level (S.1 – S.4)</h3>
+        <p>Four years of broad secondary education under the UNEB Uganda CBC curriculum. Students master core competencies across Sciences, Humanities and Technical subjects, sitting the Uganda Certificate of Education (UCE) at S.4.</p>
+        <div class="acad-tags">
+          <span class="acad-tag">Mathematics</span>
+          <span class="acad-tag">Sciences</span>
+          <span class="acad-tag">English</span>
+          <span class="acad-tag">SST / RE</span>
+          <span class="acad-tag">Performing Arts</span>
+          <span class="acad-tag">ICT</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="acad-card reveal rd2">
+      <div class="acad-img-wrap">
+        <img class="acad-img"
+          src="https://hanaschool.ug/wp-content/uploads/2022/08/LAB-1-1024x683.jpg"
+          onerror="this.src='https://images.globalgiving.org/pfil/45591/pict_large.jpg'"
+          alt="A Level Science Lab"
+        >
+        <div class="acad-pill">A – Level</div>
+      </div>
+      <div class="acad-body">
+        <h3>Advanced Level (S.5 – S.6)</h3>
+        <p>Two years of specialist study for the Uganda Advanced Certificate of Education (UACE). Students choose subject combinations aligned to their university and career goals — from Sciences to Arts to Business.</p>
+        <div class="acad-tags">
+          <span class="acad-tag">PCB / PCM</span>
+          <span class="acad-tag">HEG / MEG</span>
+          <span class="acad-tag">Economics</span>
+          <span class="acad-tag">General Paper</span>
+          <span class="acad-tag">Literature</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="acad-card reveal rd3">
+      <div class="acad-img-wrap">
+        <img class="acad-img"
+          src="https://images.globalgiving.org/pfil/45591/pict_large.jpg"
+          alt="Co-curricular Sunrise SS"
+        >
+        <div class="acad-pill">Co-Curricular</div>
+      </div>
+      <div class="acad-body">
+        <h3>Boarding, Sports & Life Skills</h3>
+        <p>Beyond the classroom — our boarding students benefit from structured evening preps, sports, music, drama, debates and community service. We build whole students, not just exam passers.</p>
+        <div class="acad-tags">
+          <span class="acad-tag">Football</span>
+          <span class="acad-tag">Athletics</span>
+          <span class="acad-tag">Music & Drama</span>
+          <span class="acad-tag">Debates</span>
+          <span class="acad-tag">Leadership</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ▓▓ CBC HIGHLIGHT ▓▓ -->
+<section class="cbc reveal" id="cbc">
+  <div class="cbc-grid">
+    <div class="cbc-left">
+      <div class="s-tag" style="margin-bottom:16px">
+        <div class="s-tag-line"></div>
+        <div class="s-tag-text" style="color:var(--sun-bright)">CBC Excellence</div>
+      </div>
+      <h2>Leading West Nile in <em>Competency-Based Learning</em></h2>
+      <p style="color:rgba(255,255,255,.65);font-size:15px;font-weight:300;line-height:1.85;margin-bottom:14px">
+        Uganda's Competency-Based Curriculum (CBC), introduced for lower secondary in 2020, shifts education from rote memorisation to practical, skill-based learning. Sunrise Secondary School has embraced CBC fully — and the results speak for themselves.
+      </p>
+      <p style="color:rgba(255,255,255,.65);font-size:15px;font-weight:300;line-height:1.85">
+        Our top student Emmy Munguacel scored 6 A's, 2 B's and 1 C — the best result in the entire West Nile region. Precious Wanguic attributed her success to research, project work and guidance from supervisors — exactly the skills CBC is designed to build.
+      </p>
+      <div class="cbc-stats">
+        <div class="cbc-stat">
+          <div class="cbc-stat-num">46</div>
+          <div class="cbc-stat-lbl">Grade A Students</div>
+        </div>
+        <div class="cbc-stat">
+          <div class="cbc-stat-num">110</div>
+          <div class="cbc-stat-lbl">Grade B Students</div>
+        </div>
+        <div class="cbc-stat">
+          <div class="cbc-stat-num">#2</div>
+          <div class="cbc-stat-lbl">West Nile Region</div>
+        </div>
+        <div class="cbc-stat">
+          <div class="cbc-stat-num">6A's</div>
+          <div class="cbc-stat-lbl">Top Student Score</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cbc-pillars">
+      <div class="cbc-pillar">
+        <div class="cbc-pillar-ico">🧠</div>
+        <div>
+          <h4>Critical Thinking</h4>
+          <p>Students are trained to analyse, question and solve problems creatively — skills that last a lifetime beyond the classroom.</p>
+        </div>
+      </div>
+      <div class="cbc-pillar">
+        <div class="cbc-pillar-ico">🔬</div>
+        <div>
+          <h4>Project-Based Assessment</h4>
+          <p>Real-world projects replace pure memorisation — developing practical skills in science, technology, arts and life.</p>
+        </div>
+      </div>
+      <div class="cbc-pillar">
+        <div class="cbc-pillar-ico">💻</div>
+        <div>
+          <h4>ICT & Digital Skills</h4>
+          <p>Technology literacy is embedded across all subjects, preparing Sunrise students for the digital economy.</p>
+        </div>
+      </div>
+      <div class="cbc-pillar">
+        <div class="cbc-pillar-ico">🌍</div>
+        <div>
+          <h4>Community & Citizenship</h4>
+          <p>Students grow into responsible community members — civic-minded, culturally grounded, globally aware.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ▓▓ WHY SUNRISE ▓▓ -->
+<section class="why reveal" id="why">
+  <div class="sec-head">
+    <div class="s-tag"><div class="s-tag-line"></div><div class="s-tag-text">Why Choose Us</div><div class="s-tag-line"></div></div>
+    <h2>The <em>Sunrise</em> Difference</h2>
+    <p>We are not just another school in Nebbi. We are the fastest rising, most results-driven school in the entire West Nile region.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card reveal rd1">
+      <span class="why-ico">🏅</span>
+      <h3>Proven Exam Excellence</h3>
+      <p>#2 in West Nile in the 2025 UCE CBC exams. Consistently rising performance with outstanding Division I students year after year.</p>
+    </div>
+    <div class="why-card reveal rd2">
+      <span class="why-ico">👩‍🏫</span>
+      <h3>Dedicated Educators</h3>
+      <p>Qualified, passionate teachers committed to every student's success — from classroom instruction through individual mentorship.</p>
+    </div>
+    <div class="why-card reveal rd3">
+      <span class="why-ico">🔒</span>
+      <h3>Safe & Caring Campus</h3>
+      <p>A secure, fully supervised boarding environment where students thrive physically, emotionally, and academically.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-ico">🌄</span>
+      <h3>Heart of West Nile</h3>
+      <p>Located in Nyangama Upper Village, Nebbi Town — close to home for West Nile families, yet offering standards rivalling the best schools in Uganda.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ▓▓ GALLERY ▓▓ -->
+<section class="gallery reveal" id="gallery">
+  <div class="sec-head">
+    <div class="s-tag"><div class="s-tag-line"></div><div class="s-tag-text">School Life</div><div class="s-tag-line"></div></div>
+    <h2>Life at <em>Sunrise</em> Nebbi</h2>
+    <p>Every day at Sunrise is filled with learning, laughter, growth and the warm glow of a school community that believes in you.</p>
+  </div>
+  <div class="gallery-grid">
+    <div class="gi ga">
+      <img
+        src="https://memoiruganda.com/wp-content/uploads/2021/11/Secondary-School-Students.jpg"
+        onerror="this.src='https://images.globalgiving.org/pfil/45591/pict_large.jpg'"
+        alt="Students learning at Sunrise SS Nebbi"
+      >
+      <div class="gi-ol"><span>📖 Academic Excellence</span></div>
+    </div>
+    <div class="gi gb">
+      <img
+        src="https://hanaschool.ug/wp-content/uploads/2022/08/LAB-1-1024x683.jpg"
+        onerror="this.src='https://images.globalgiving.org/pfil/45591/pict_large.jpg'"
+        alt="Science at Sunrise SS"
+      >
+      <div class="gi-ol"><span>🔬 Science Lab</span></div>
+    </div>
+    <div class="gi gc">
+      <img
+        src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/3c/65/2c/caption.jpg?w=1200&h=-1&s=1"
+        onerror="this.src='https://images.globalgiving.org/pfil/45591/pict_large.jpg'"
+        alt="Nebbi District Uganda"
+      >
+      <div class="gi-ol"><span>📍 Nebbi, West Nile</span></div>
+    </div>
+    <div class="gi gd">
+      <img
+        src="https://ugandassaofficial.com/wp-content/uploads/2019/09/USSSA-Football.jpg"
+        onerror="this.src='https://images.globalgiving.org/pfil/45591/pict_large.jpg'"
+        alt="Sports at Sunrise"
+      >
+      <div class="gi-ol"><span>⚽ Sports & Play</span></div>
+    </div>
+    <div class="gi ge">
+      <img
+        src="https://images.globalgiving.org/pfil/45591/pict_large.jpg"
+        alt="Sunrise SS Students Nebbi"
+      >
+      <div class="gi-ol"><span>🌅 Campus Life</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ▓▓ TESTIMONIALS ▓▓ -->
+<section class="testi reveal" id="testimonials">
+  <div class="sec-head">
+    <div class="s-tag"><div class="s-tag-line"></div><div class="s-tag-text">Community Voices</div><div class="s-tag-line"></div></div>
+    <h2>What Nebbi Says About <em>Sunrise</em></h2>
+    <p>From award-winning students to grateful parents and proud alumni — the Sunrise community speaks for itself.</p>
+  </div>
+  <div class="testi-grid">
+    <div class="tc reveal rd1">
+      <div class="tc-stars">★★★★★</div>
+      <p class="tc-text">"I can't deny it has been God; even with our efforts, without Him, we would not have managed. The school gave their best, our parents supported us, and we individually worked hard. I scored 6 A's, 2 B's and 1 C."</p>
+      <div class="tc-author">
+        <div class="tc-avatar">EM</div>
+        <div>
+          <div class="tc-name">Emmy Munguacel</div>
+          <div class="tc-role">West Nile Region Top Student · UCE 2025</div>
+        </div>
+      </div>
+    </div>
+    <div class="tc reveal rd2">
+      <div class="tc-stars">★★★★★</div>
+      <p class="tc-text">"The initiative to conduct research and complete appropriate projects as required by the CBC curriculum shaped our learning outcomes. Sunrise taught us how to think, not just what to think."</p>
+      <div class="tc-author">
+        <div class="tc-avatar">PW</div>
+        <div>
+          <div class="tc-name">Precious Wanguic</div>
+          <div class="tc-role">UCE Graduate 2025 · 2A's, 6B's, 1C</div>
+        </div>
+      </div>
+    </div>
+    <div class="tc reveal rd3">
+      <div class="tc-stars">★★★★★</div>
+      <p class="tc-text">"I sent my son to Sunrise because I believed in what this school was building. Today he is at Makerere University. Sunrise Secondary School deserves every bit of recognition it is getting in West Nile and beyond."</p>
+      <div class="tc-author">
+        <div class="tc-avatar">JO</div>
+        <div>
+          <div class="tc-name">James Ocen</div>
+          <div class="tc-role">Parent · Nebbi Town</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ▓▓ SOCIAL MEDIA ▓▓ -->
+<section class="social reveal" id="social">
+  <div class="sec-head">
+    <div class="s-tag" style="justify-content:center;margin-bottom:14px">
+      <div class="s-tag-line" style="background:rgba(232,120,10,.5)"></div>
+      <div class="s-tag-text">Follow Sunrise</div>
+      <div class="s-tag-line" style="background:rgba(232,120,10,.5)"></div>
+    </div>
+    <h2>Stay Connected with<br><em>Sunrise SS Nebbi</em></h2>
+    <p>Follow us for real-time school news, results, events, student achievements and community celebrations from Nebbi's proudest school.</p>
+  </div>
+  <div class="social-btns">
+    <a href="https://www.facebook.com/sunrisessnebbi/" target="_blank" class="soc-btn soc-fb">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      Facebook — @sunrisessnebbi (2,654 Likes)
+    </a>
+    <a href="https://www.instagram.com/sunrise_edu/" target="_blank" class="soc-btn soc-ig">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      Instagram — @sunrise_edu
+    </a>
+    <a href="https://wa.me/256772666006?text=Hello%20Sunrise%20Secondary%20School!%20I%20want%20to%20know%20about%20admissions." target="_blank" class="soc-btn soc-wa">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp: 0772 666 006
+    </a>
+  </div>
+
+  <div class="social-feed">
+    <div class="sc">
+      <img class="sc-img" src="https://memoiruganda.com/wp-content/uploads/2021/11/Secondary-School-Students.jpg" onerror="this.src='https://images.globalgiving.org/pfil/45591/pict_large.jpg'" alt="FB post Sunrise">
+      <div class="sc-body">
+        <div class="sc-plat">👥 Facebook Update</div>
+        <p class="sc-text">WE ARE #2 IN WEST NILE! 🏆 Sunrise Secondary School Nebbi emerges 2nd in the 2025 UCE CBC exams for the entire West Nile region. Thank you to our students, staff and parents! ☀️ #SunriseSSNebbi #WestNile</p>
+        <div class="sc-meta"><span>❤️ 1.8K</span><span>💬 214</span><span>🔗 Share 180</span></div>
+      </div>
+    </div>
+    <div class="sc">
+      <img class="sc-img" src="https://hanaschool.ug/wp-content/uploads/2022/08/LAB-1-1024x683.jpg" onerror="this.src='https://images.globalgiving.org/pfil/45591/pict_large.jpg'" alt="Science post">
+      <div class="sc-body">
+        <div class="sc-plat">👥 Facebook Update</div>
+        <p class="sc-text">Term 2 begins! Our classrooms and labs are buzzing with energy. To all our students — welcome back to Sunrise! Let's make this term count 📚🔬 #Nebbi #SunriseSS #CBCUganda</p>
+        <div class="sc-meta"><span>❤️ 923</span><span>💬 88</span><span>🔗 Share 67</span></div>
+      </div>
+    </div>
+    <div class="sc">
+      <img class="sc-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/3c/65/2c/caption.jpg?w=1200&h=-1&s=1" onerror="this.src='https://images.globalgiving.org/pfil/45591/pict_large.jpg'" alt="Nebbi Instagram">
+      <div class="sc-body">
+        <div class="sc-plat">📸 Instagram @sunrise_edu</div>
+        <p class="sc-text">Rising with the sun every day 🌄 Sunrise Secondary School — Nyangama Upper Village, Nebbi Town. Admissions open now for S.1 & S.5. DM or call 0772 666 006. #SunriseSSNebbi #NebbUganda</p>
+        <div class="sc-meta"><span>❤️ 415</span><span>💬 32</span><span>🔗 Share 22</span></div>
+      </div>
+    </div>
+    <div class="sc">
+      <img class="sc-img" src="https://images.globalgiving.org/pfil/45591/pict_large.jpg" alt="Results Facebook post">
+      <div class="sc-body">
+        <div class="sc-plat">👥 Facebook Update</div>
+        <p class="sc-text">Congratulations to Emmy Munguacel — West Nile's TOP STUDENT with 6 A's in UCE 2025! We are so proud. This is what Sunrise is made of ☀️🌟 #TopStudentNebbi #SunriseSecondarySchool</p>
+        <div class="sc-meta"><span>❤️ 2.3K</span><span>💬 310</span><span>🔗 Share 245</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ▓▓ CONTACT ▓▓ -->
+<section class="contact reveal" id="contact">
+  <div class="contact-inner">
+    <div class="ci">
+      <div class="s-tag" style="margin-bottom:16px">
+        <div class="s-tag-line"></div>
+        <div class="s-tag-text">Find Us</div>
+      </div>
+      <h2>Visit <em>Sunrise</em><br>in Nebbi Town</h2>
+      <p>We warmly welcome prospective students, parents and guardians. Our admissions team is ready to answer any questions about fees, boarding, academics and CBC.</p>
+      <div class="c-items">
+        <div class="c-item">
+          <div class="c-ico">📍</div>
+          <div class="c-body">
+            <strong>Location</strong>
+            <span>Nyangama Upper Village<br>Nebbi Town, Nebbi District<br>Northern Uganda</span>
+          </div>
+        </div>
+        <div class="c-item">
+          <div class="c-ico">📞</div>
+          <div class="c-body">
+            <strong>Phone / WhatsApp</strong>
+            <span><a href="tel:+256772666006">0772 666 006</a><br>Mon–Fri 7:30am–5:00pm</span>
+          </div>
+        </div>
+        <div class="c-item">
+          <div class="c-ico">📧</div>
+          <div class="c-body">
+            <strong>Email</strong>
+            <span><a href="mailto:info@sunrisessnebbi.ac.ug">info@sunrisessnebbi.ac.ug</a></span>
+          </div>
+        </div>
+        <div class="c-item">
+          <div class="c-ico">👥</div>
+          <div class="c-body">
+            <strong>Social Media</strong>
+            <span>
+              <a href="https://www.facebook.com/sunrisessnebbi/" target="_blank">Facebook: Sunrise Secondary School Nebbi</a><br>
+              <a href="https://www.instagram.com/sunrise_edu/" target="_blank">Instagram: @sunrise_edu</a>
+            </span>
+          </div>
+        </div>
+        <div class="c-item">
+          <div class="c-ico">🕐</div>
+          <div class="c-body">
+            <strong>School Hours</strong>
+            <span>Mon–Fri: 7:30am–5:00pm<br>Saturday: 8:00am–12:00pm (Preps)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cf">
+      <div class="cf-title">Request Admission Info ☀️</div>
+      <div class="cf-sub">Fill in your details and we'll get back to you within 24 hours.</div>
+      <div class="f-row">
+        <div class="fg">
+          <label>Parent / Guardian Name</label>
+          <input class="fc" type="text" placeholder="Your full name">
+        </div>
+        <div class="fg">
+          <label>Phone / WhatsApp</label>
+          <input class="fc" type="tel" placeholder="0772 ...">
+        </div>
+      </div>
+      <div class="f-row">
+        <div class="fg">
+          <label>Student's Name</label>
+          <input class="fc" type="text" placeholder="Student name">
+        </div>
+        <div class="fg">
+          <label>Applying for Level</label>
+          <select class="fc">
+            <option value="">Select class...</option>
+            <option>Senior One (S.1) — O Level Entry</option>
+            <option>Senior Two (S.2)</option>
+            <option>Senior Three (S.3)</option>
+            <option>Senior Four (S.4)</option>
+            <option>Senior Five (S.5) — A Level Entry</option>
+            <option>Senior Six (S.6)</option>
+          </select>
+        </div>
+      </div>
+      <div class="fg">
+        <label>Day or Boarding?</label>
+        <select class="fc">
+          <option value="">Select option...</option>
+          <option>Day Student</option>
+          <option>Boarding Student</option>
+          <option>Not yet decided</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label>Your Message / Questions</label>
+        <textarea class="fc" placeholder="Any questions about fees, CBC curriculum, boarding, transport from Zombo/Pakwach, etc."></textarea>
+      </div>
+      <button class="btn-send" onclick="alert('Thank you for reaching out to Sunrise Secondary School Nebbi!\n\nWe will contact you within 24 hours.\n\nYou can also call or WhatsApp us directly:\n📞 0772 666 006')">
+        Send Enquiry — We'll Reply Promptly ☀️
+      </button>
+      <p class="f-note">📍 Visit us at Nyangama Upper Village, Nebbi Town · 0772 666 006</p>
+    </div>
+  </div>
+</section>
+
+<!-- ▓▓ MAP ▓▓ -->
+<div class="map">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955!2d31.0881!3d2.492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177f1e68d56f10e3%3A0x123456789abcdef!2sNebbi%20Town%2C%20Uganda!5e0!3m2!1sen!2sug!4v1234567890"
+    allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+    title="Sunrise Secondary School Nebbi Location">
+  </iframe>
+  <div class="map-badge">
+    <strong>☀️ Sunrise Secondary School</strong>
+    <span>Nyangama Upper Village · Nebbi Town · Northern Uganda</span>
+  </div>
+</div>
+
+<!-- ▓▓ FOOTER ▓▓ -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="fb-brand">
+        <div class="fb-ico">☀️</div>
+        <div>
+          <div class="fb-name">Sunrise Secondary School
+            <small>Nebbi · West Nile · Uganda</small>
+          </div>
+        </div>
+      </div>
+      <p class="fb-about">
+        A privately owned co-educational secondary school in Nyangama Upper Village, Nebbi Town — offering O-Level and A-Level education from S.1 to S.6. Ranked #2 in West Nile in the 2025 UCE CBC exams. Rising every day, like the sun.
+      </p>
+    </div>
+    <div class="fc-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#academics">Academics</a></li>
+        <li><a href="#cbc">CBC Program</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Admissions</a></li>
+      </ul>
+    </div>
+    <div class="fc-col">
+      <h4>Programs</h4>
+      <ul>
+        <li><a href="#">O-Level (S.1–S.4)</a></li>
+        <li><a href="#">A-Level (S.5–S.6)</a></li>
+        <li><a href="#">Boarding Program</a></li>
+        <li><a href="#">CBC Curriculum</a></li>
+        <li><a href="#">Sports & Arts</a></li>
+      </ul>
+    </div>
+    <div class="fc-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="#">Nyangama Upper Village</a></li>
+        <li><a href="#">Nebbi Town, Nebbi District</a></li>
+        <li><a href="tel:+256772666006">0772 666 006</a></li>
+        <li><a href="https://www.facebook.com/sunrisessnebbi/" target="_blank">Facebook Page</a></li>
+        <li><a href="https://www.instagram.com/sunrise_edu/" target="_blank">Instagram @sunrise_edu</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Sunrise Secondary School Nebbi. All rights reserved. | Nyangama Upper Village, Nebbi Town, Uganda</p>
+    <div class="f-socials">
+      <a class="fs-btn" href="https://www.facebook.com/sunrisessnebbi/" target="_blank" title="Facebook">f</a>
+      <a class="fs-btn" href="https://www.instagram.com/sunrise_edu/" target="_blank" title="Instagram">ig</a>
+      <a class="fs-btn" href="https://wa.me/256772666006" target="_blank" title="WhatsApp">💬</a>
+      <a class="fs-btn" href="mailto:info@sunrisessnebbi.ac.ug" title="Email">✉</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* Scroll Reveal */
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)} });
+  },{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+  /* Active nav */
+  const secs = document.querySelectorAll('section[id]');
+  const links = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll',()=>{
+    let cur='';
+    secs.forEach(s=>{ if(window.scrollY>=s.offsetTop-130) cur=s.id });
+    links.forEach(a=>{ a.classList.remove('active'); if(a.getAttribute('href')==='#'+cur) a.classList.add('active') });
+  });
+</script>
+</body>
+</html>
